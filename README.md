@@ -4,6 +4,8 @@ gfdiPiTools
 These are scripts and modules for controlling a Raspberry Pi and various
 peripheral hardware.
 
+We chose the MIT license.  See *license.txt*.
+
 
 moveMotor.py
 ------------
@@ -30,7 +32,7 @@ the same value, specified on the command line, for red, green, and blue.
 
 Only values from 0-255 are valid for *num*.
 
-Dependencies include the pyblinkm library and our in-house library, GFDITools.
+Depends on the pyblinkm library.
 
 
 checkWeather.py
@@ -41,6 +43,11 @@ checkWeather.py
 This just prints current weather conditions, gathered from environmental
 sensors.
 
+This depends on our in-house library WeatherStation.py, which depends on the
+third party library Adafruit_BMP085py, which in turn depends on
+Adafruit_I2C.py.  We have supplied a currently-current (as of 2013-08-26) copy
+of each of these for convenience, but you may want to find and obtain the
+latest versions.
 
 recordWeather.py
 ----------------
@@ -49,3 +56,6 @@ recordWeather.py
 
 This script is just like checkWeather.py, except it records the conditions in a
 CSV file.  If CSVFILE is not specified, it will write to a default location.
+
+This also uses WeatherStation.py, so see the dependency notes under
+*checkWeather.py*.
