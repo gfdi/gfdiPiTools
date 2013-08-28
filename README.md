@@ -43,6 +43,7 @@ sensors.
 
 
 recordWeather.py
+----------------
 
 *recordWeather.py [(-f | --file) &lt;CSVFILE&gt;]*
 
