@@ -9,13 +9,20 @@ from pyblinkm import BlinkM, Scripts
 sys.path.append('../customLibraries')
 import GFDITools
 
+usageLine = "Usage:\n  ledControl.py <0-255>"
 # Check arguments.
 if 2 != len(sys.argv):
-  print "Usage:\n  ledControl.py <0-255>"
+  print usageLine
   exit(1)
 
 # Grab the first argument.  (Not argv[0], that's the command name.)
 arg1 = int(sys.argv[1])
+
+# range() is a little unintuitive, to me.  range(0, 256) excludes 256, meaning
+# it includes numbers 0 - 255, inclusive.
+if not arg1 in range(0, 256):
+  print usageLine
+  exit(1)
 
 # Get the i2c bus number, then create a blinkm object with that bus number.
 bus = GFDITools.guessBus()
