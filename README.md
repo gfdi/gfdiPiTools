@@ -6,6 +6,10 @@ peripheral hardware.
 
 We chose the MIT license.  See *license.txt*.
 
+Most of the code currently posted (as of 2013-08-29) was written by Dr. Daniel
+Kuncicky and Aaron Bugher.  The copyright is held by FSU GFDI.  If you use our
+code, that's great!  We'd love to hear about what you're doing.
+
 
 moveMotor.py
 ------------
